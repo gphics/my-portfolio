@@ -1,0 +1,383 @@
+// //// default styles
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+$primary-color: #000000;
+$secondary-color: #8ce689;
+$neutral-color: #ffffff;
+$bg : #25262A;
+$second-bg: #2D2E32;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+    color: $neutral-color;
+    transition: .5s all;
+}
+
+#root {
+    overflow: hidden;
+}
+
+////general style
+/// 
+/// 
+.each-section-title {
+
+    background-color: $secondary-color;
+    color: $primary-color;
+    width: max-content;
+    padding: 5px;
+    text-transform: capitalize;
+    border-radius: 3px;
+    margin: 5px 0;
+
+    &:hover {
+        border: 2px solid $secondary-color;
+        background-color: transparent;
+        color: $neutral-color
+    }
+}
+
+@mixin holderStyleWidth {
+    width: 48%;
+
+    @media (max-width:700px) {
+        width: 98%;
+    }
+
+}
+
+///// main styles
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: $bg;
+    overflow-y: scroll;
+    align-items: center;
+}
+
+
+.first-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    flex: 0 0 auto;
+
+    // styling the nav section
+    nav {
+        width: 70%;
+        height: 40px;
+        padding-top: 5px;
+        align-self: center;
+
+        margin-bottom: 1%;
+        display: flex;
+        justify-content: space-between;
+
+        // my name
+        h5 {
+            font-weight: 900;
+            margin: 1%;
+        }
+
+        // link holder
+        .link-holder {
+            margin: 1%;
+            display: flex;
+            justify-content: space-around;
+            width: 70%;
+            height: 100%;
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+
+
+                    .link-icon {
+                        fill: $secondary-color;
+                        transform: scale(1.4);
+                    }
+                }
+            }
+        }
+
+    }
+
+    // styling the info section
+
+    .header-main-intro {
+        display: flex;
+        justify-content: space-around;
+        margin: 5px 0;
+        flex: 1 1 auto;
+
+        @media (max-width:700px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        // main intro info
+        .intro-info {
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            align-items: center;
+            @include holderStyleWidth();
+
+            @media (max-width:700px) {
+                width: 98%;
+                height: 200px;
+            }
+
+            flex: 1 1 auto;
+            justify-content: center;
+            padding-left: 10px;
+
+            h5 {
+                align-self: flex-start;
+                margin-left: 15%;
+                // width:70%
+            }
+
+            h3 {
+                text-transform: capitalize;
+                margin-top: 5px;
+                width: 70%;
+            }
+
+            p {
+                margin-top: 5px;
+                width: 70%
+            }
+        }
+
+        //hero
+        .hero-section {
+            @include holderStyleWidth();
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+
+            img {
+                width: 50%;
+                flex: 1 1 auto;
+                max-width: 250px;
+                max-height: 250px;
+                border-radius: 100%;
+                // border: 5px solid $neutral-color;
+                animation: rotor 3s linear 0s infinite;
+                border: 5px solid transparent;
+                border-bottom-color: $secondary-color;
+                border-left-color: $secondary-color;
+
+                &:hover {
+                    transform: scale(1.05);
+                    border-top-color: $secondary-color;
+                    border-right-color: $secondary-color;
+                    border-bottom-color: transparent;
+                    border-left-color: transparent;
+
+                }
+
+
+            }
+        }
+    }
+
+}
+
+.second-section {
+    width: 100%;
+    flex: 0 0 auto;
+    display: flex;
+    background-color: $second-bg;
+    padding-left: 10px;
+
+    margin: 5px 0;
+
+    @media (max-width:700px) {
+        flex-direction: column;
+    }
+
+    // all skill holder
+    .skillset {
+        @include holderStyleWidth();
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+
+        .each-section-title {
+            align-self: normal;
+            margin-left: 15%;
+        }
+
+        .skills-list {
+            margin: 5px 0;
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+
+            width: 70%;
+
+            aside {
+                display: flex;
+                height: 30px;
+                margin: 2px 0;
+                align-items: center;
+                text-transform: capitalize;
+
+                &:hover {
+                    transform: scale(1.02);
+
+                    h5,
+                    .icon {
+                        color: $secondary-color;
+                        fill: $secondary-color;
+
+                    }
+
+                }
+
+                h5 {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    .second-intro {
+        width: 48%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width:700px) {
+            width: 98%;
+        }
+
+        h4,
+        p {
+            width: 70%;
+            margin: 5px 0;
+        }
+
+        h4 {
+            color: $secondary-color
+        }
+    }
+}
+
+
+.third-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 0;
+
+    .project-list {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0;
+        align-items: center;
+flex-wrap: wrap;
+        @media (max-width:700px) {
+            flex-direction: column;
+
+            .each-project {
+                width: 98%;
+            }
+        }
+    }
+
+    .each-project {
+        width: 32%;
+        height: 360px;
+        margin: 10px 0;
+        border-radius: 5px;
+        background-color: $second-bg;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 5px;
+        justify-content: space-around;
+
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: 1px 1px 1px $neutral-color, -1px -1px 5px $neutral-color;
+        }
+
+        img {
+            width: 80%;
+            height: 10%;
+            margin: 5px auto;
+        }
+
+        div {
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            h4 {
+                color: $secondary-color;
+                text-transform: capitalize;
+                width: 98%;
+            }
+
+            h6 {
+                width: 98%;
+                text-transform: capitalize;
+                font-size: 12px;
+            }
+
+            p {
+                width: 98%;
+            }
+
+            a {
+                text-decoration: none;
+                color: $secondary-color;
+                padding-left: 10px;
+                display: flex;
+                align-items: center;
+                width: max-content;
+
+
+
+                .icon {
+                    fill: $secondary-color;
+                    color: $secondary-color;
+                    border: none;
+                    transform: scale(1.3);
+
+                }
+
+                &:hover {
+                    .icon {
+                        transform: rotate(45deg) scale(1.5);
+                        fill: $neutral-color
+                    }
+
+
+
+                }
+            }
+        }
+
+
+    }
+}
