@@ -3,9 +3,16 @@ import { IoLogoJavascript } from "react-icons/io";
 import { SiTypescript, SiSass } from "react-icons/si";
 import { AiFillHtml5 } from "react-icons/ai";
 import { DiCss3 } from "react-icons/di";
+import { FaNodeJs } from "react-icons/fa";
+import { DiMongodb } from "react-icons/di";
+import { TbBrandNextjs } from "react-icons/tb";
 const SecondSection = () => {
   type skill = { name: string; Icon: any };
   const skillsArr: skill[] = [
+    { name: "Nodejs", Icon: FaNodeJs },
+    { name: "Expressjs", Icon: FaNodeJs },
+    { name: "MongoDB", Icon: DiMongodb },
+    { name: "Nextjs", Icon: TbBrandNextjs },
     { name: "React", Icon: FaReact },
     { name: "typeScript", Icon: SiTypescript },
     { name: "javaScript", Icon: IoLogoJavascript },

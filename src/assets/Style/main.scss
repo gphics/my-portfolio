@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 $primary-color: #000000;
-$secondary-color: #8ce689;
+$secondary-color: #FF6B2F;
 $neutral-color: #ffffff;
 $bg : #25262A;
 $second-bg: #2D2E32;
@@ -290,21 +290,25 @@ $second-bg: #2D2E32;
     .project-list {
         width: 95%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: 5px 0;
         align-items: center;
-flex-wrap: wrap;
+        flex-wrap: wrap;
+
         @media (max-width:700px) {
             flex-direction: column;
 
             .each-project {
                 width: 98%;
+                max-width: 98%;
+
             }
         }
     }
 
     .each-project {
-        width: 32%;
+        width: 40%;
+        max-width: 400px;
         height: 360px;
         margin: 10px 0;
         border-radius: 5px;
@@ -336,16 +340,19 @@ flex-wrap: wrap;
                 color: $secondary-color;
                 text-transform: capitalize;
                 width: 98%;
+                text-align: center;
             }
 
             h6 {
                 width: 98%;
                 text-transform: capitalize;
                 font-size: 12px;
+                text-align: center;
             }
 
             p {
                 width: 98%;
+                text-align: center;
             }
 
             a {
@@ -356,14 +363,14 @@ flex-wrap: wrap;
                 align-items: center;
                 width: max-content;
 
-
+                width: 100%;
 
                 .icon {
                     fill: $secondary-color;
                     color: $secondary-color;
                     border: none;
                     transform: scale(1.3);
-
+                    margin: 1px auto;
                 }
 
                 &:hover {

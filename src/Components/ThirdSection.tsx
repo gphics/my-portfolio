@@ -1,7 +1,6 @@
-import HiPayLogo from "../assets/Static/HiPayLogo.svg";
-import HiShopLogo from "../assets/Static/HiShopLogo.svg";
-import ExamPrecisionLogo from "../assets/Static/ExamPrecisionLogo.svg";
-import { FaLink } from "react-icons/fa";
+import FeedMasterLogo from "../assets/Static/feed-mastericon.svg";
+import TrackItLogo from "../assets/Static/trackit-con.svg";
+import { TbWorldWww } from "react-icons/tb";
 const ThirdSection = () => {
   interface obj {
     name: string;
@@ -12,25 +11,18 @@ const ThirdSection = () => {
   }
   const mainArr: obj[] = [
     {
-      name: "exam-precision",
-      Img: ExamPrecisionLogo,
-      url: "https://exam-precision.netlify.app",
-      info: "An exam hosting platform that allows users to host their exams easily in an automated way. Marking of the exam and displaying the result is done automatically with high accuracy without your intervention.",
-      stack: "JavaScript,React, Supabase, CSS, ShortUUID ",
+      name: "Feed-master",
+      Img: FeedMasterLogo,
+      url: "https://feed-master-client.vercel.app/landing-page",
+      info: "A fullstack javaScript web application that helps farmers, and feed millers generate feed formula effortlessly and accurate in a blink of an eye.",
+      stack: "Nodejs, Expressjs, MongoDB, Nextjs, Scss",
     },
     {
-      name: "Hi-pay",
-      Img: HiPayLogo,
-      url: "https://hi-pay.netlify.app",
-      info: "A fictional e-banking platform that allows user to send and receive money from other users. It also serves as a payment gateway used in Hi-Shop.",
-      stack: "TypeScript,React, Supabase, SCSS, ShortUUID ",
-    },
-    {
-      name: "Hi-shop",
-      Img: HiShopLogo,
-      url: "https://hi-shop.netlify.app",
-      info: "A fictional e-commerce website that allows users to create, sell and buy products with their Hi-Pay account.",
-      stack: "TypeScript,React, Supabase, SCSS, ShortUUID, Toastify ",
+      name: "Track-it",
+      Img: TrackItLogo,
+      url: "https://trackit-gb3z.onrender.com",
+      info: "A fullstack javaScript web application develop to help business owners record their business debts and also set reminders so as to help them in their business management.",
+      stack: "Nodejs, Expressjs, MongoDB, Reactjs, Scss",
     },
   ];
   return (
@@ -46,13 +38,12 @@ const ThirdSection = () => {
                 <p> {item.info} </p>
                 <h6>stack: {item.stack}</h6>
                 <a title={item.name} href={item.url}>
-                  <FaLink className="icon" />
+                  <TbWorldWww className="icon" />
                 </a>
               </div>
             </section>
           );
         })}
-              
       </article>
     </div>
   );
