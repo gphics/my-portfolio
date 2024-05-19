@@ -1,6 +1,5 @@
 import FeedMasterIcon from "../assets/Static/feed-mastericon.svg";
 import TrackItIcon from "../assets/Static/trackit-con.svg";
-import { TbWorldWww } from "react-icons/tb";
 import ChiralIcon from "../assets/Static/chiral-icon.svg";
 import KingFashionIcon from "../assets/Static/king-fashion-icon.svg";
 const ThirdSection = () => {
