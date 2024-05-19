@@ -1,6 +1,8 @@
-import FeedMasterLogo from "../assets/Static/feed-mastericon.svg";
-import TrackItLogo from "../assets/Static/trackit-con.svg";
+import FeedMasterIcon from "../assets/Static/feed-mastericon.svg";
+import TrackItIcon from "../assets/Static/trackit-con.svg";
 import { TbWorldWww } from "react-icons/tb";
+import ChiralIcon from "../assets/Static/chiral-icon.svg";
+import KingFashionIcon from "../assets/Static/king-fashion-icon.svg";
 const ThirdSection = () => {
   interface obj {
     name: string;
@@ -12,17 +14,31 @@ const ThirdSection = () => {
   const mainArr: obj[] = [
     {
       name: "Feed-master",
-      Img: FeedMasterLogo,
+      Img: FeedMasterIcon,
       url: "https://feed-master-client.vercel.app/landing-page",
       info: "A fullstack javaScript web application that helps farmers, and feed millers generate feed formula effortlessly and accurate in a blink of an eye.",
       stack: "Nodejs, Expressjs, MongoDB, Nextjs, Scss",
     },
     {
       name: "Track-it",
-      Img: TrackItLogo,
+      Img: TrackItIcon,
       url: "https://trackit-gb3z.onrender.com",
       info: "A fullstack javaScript web application develop to help business owners record their business debts and also set reminders so as to help them in their business management.",
       stack: "Nodejs, Expressjs, MongoDB, Reactjs, Scss",
+    },
+    {
+      name: "Chiral",
+      Img: ChiralIcon,
+      url: "https://chiral.vercel.app/",
+      info: "The official website for Chiral, an agency responsible for design of brand visual identities and development of softwares. ",
+      stack: "Nodejs,Nextjs, Expressjs, MongoDB, Reactjs, Scss",
+    },
+    {
+      name: "King's Fashion",
+      Img: KingFashionIcon,
+      url: "https://kingfashion.vercel.app/",
+      info: "The official website for King's Fashion, a fashion design brand that design all sorts of clothes styles.",
+      stack: "Nodejs, Nestjs, Nextjs, MongoDB, Reactjs, Scss",
     },
   ];
   return (
@@ -38,7 +54,7 @@ const ThirdSection = () => {
                 <p> {item.info} </p>
                 <h6>stack: {item.stack}</h6>
                 <a title={item.name} href={item.url}>
-                  <TbWorldWww className="icon" />
+                  visit website
                 </a>
               </div>
             </section>

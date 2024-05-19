@@ -1,8 +1,10 @@
 // //// default styles
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-$primary-color: #000000;
-$secondary-color: #FF6B2F;
+// $primary-color: #000000;
+$primary-color: #06061B;
+// $secondary-color: #FF6B2F;
+$secondary-color: #FF00FF;
 $neutral-color: #ffffff;
 $bg : #25262A;
 $second-bg: #2D2E32;
@@ -24,11 +26,10 @@ $second-bg: #2D2E32;
 /// 
 /// 
 .each-section-title {
-
     background-color: $secondary-color;
     color: $primary-color;
     width: max-content;
-    padding: 5px;
+    padding: 10px 20px;
     text-transform: capitalize;
     border-radius: 3px;
     margin: 5px 0;
@@ -199,12 +200,15 @@ $second-bg: #2D2E32;
     flex: 0 0 auto;
     display: flex;
     background-color: $second-bg;
-    padding-left: 10px;
+    // padding-left: 10px;
 
-    margin: 5px 0;
+    margin: 10px 0;
 
     @media (max-width:700px) {
         flex-direction: column;
+        .skillset,.second-intro{
+            margin: 10px auto;
+        }
     }
 
     // all skill holder
@@ -216,7 +220,6 @@ $second-bg: #2D2E32;
         align-items: center;
 
 
-
         .each-section-title {
             align-self: normal;
             margin-left: 15%;
@@ -226,10 +229,8 @@ $second-bg: #2D2E32;
             margin: 5px 0;
             display: flex;
             flex-direction: column;
-            height: 200px;
-
+            height: 400px;
             width: 70%;
-
             aside {
                 display: flex;
                 height: 30px;
@@ -238,9 +239,9 @@ $second-bg: #2D2E32;
                 text-transform: capitalize;
 
                 &:hover {
-                    transform: scale(1.02);
+                    transform: scale(1.007);
 
-                    h5,
+                    h4,
                     .icon {
                         color: $secondary-color;
                         fill: $secondary-color;
@@ -248,8 +249,10 @@ $second-bg: #2D2E32;
                     }
 
                 }
-
-                h5 {
+                .icon{
+                    transform: scale(1.5);
+                }
+                h4 {
                     margin-left: 15px;
                 }
             }
@@ -294,7 +297,7 @@ $second-bg: #2D2E32;
         margin: 5px 0;
         align-items: center;
         flex-wrap: wrap;
-
+        // background-color: red;
         @media (max-width:700px) {
             flex-direction: column;
 
@@ -307,9 +310,9 @@ $second-bg: #2D2E32;
     }
 
     .each-project {
-        width: 40%;
+        width: 45%;
         max-width: 400px;
-        height: 360px;
+        height: 350px;
         margin: 10px 0;
         border-radius: 5px;
         background-color: $second-bg;
@@ -321,7 +324,7 @@ $second-bg: #2D2E32;
 
         &:hover {
             transform: scale(1.01);
-            box-shadow: 1px 1px 1px $neutral-color, -1px -1px 5px $neutral-color;
+            // box-shadow: 1px 1px 1px $neutral-color, -1px -1px 5px $neutral-color;
         }
 
         img {
@@ -356,32 +359,32 @@ $second-bg: #2D2E32;
             }
 
             a {
-                text-decoration: none;
+                // text-decoration: none;
                 color: $secondary-color;
-                padding-left: 10px;
-                display: flex;
-                align-items: center;
-                width: max-content;
-
+                // padding-left: 10px;
+                // display: flex;
+                // align-items: center;
+                // width: max-content;
+                text-align: center;
                 width: 100%;
 
-                .icon {
-                    fill: $secondary-color;
-                    color: $secondary-color;
-                    border: none;
-                    transform: scale(1.3);
-                    margin: 1px auto;
-                }
+                // .icon {
+                //     fill: $secondary-color;
+                //     color: $secondary-color;
+                //     border: none;
+                //     transform: scale(1.3);
+                //     margin: 1px auto;
+                // }
 
-                &:hover {
-                    .icon {
-                        transform: rotate(45deg) scale(1.5);
-                        fill: $neutral-color
-                    }
+                // &:hover {
+                //     .icon {
+                //         transform: rotate(45deg) scale(1.5);
+                //         fill: $neutral-color
+                //     }
 
 
 
-                }
+                // }
             }
         }
 

@@ -6,12 +6,14 @@ import { DiCss3 } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { TbBrandNextjs } from "react-icons/tb";
+import { SiNestjs } from "react-icons/si";
 const SecondSection = () => {
   type skill = { name: string; Icon: any };
   const skillsArr: skill[] = [
     { name: "Nodejs", Icon: FaNodeJs },
     { name: "Expressjs", Icon: FaNodeJs },
     { name: "MongoDB", Icon: DiMongodb },
+    { name: "Nestjs", Icon: SiNestjs },
     { name: "Nextjs", Icon: TbBrandNextjs },
     { name: "React", Icon: FaReact },
     { name: "typeScript", Icon: SiTypescript },
@@ -38,7 +40,7 @@ const SecondSection = () => {
             return (
               <aside key={index}>
                 <item.Icon className="icon" />
-                <h5> {item.name} </h5>
+                <h4> {item.name} </h4>
               </aside>
             );
           })}
