@@ -12,7 +12,7 @@ const FirstSection = () => {
     { title: "github", href: "https://github.com/gphics", Icon: AiFillGithub },
     {
       title: "twitter",
-      href: "https://twitter.com/chiral04",
+      href: "https://x.com/chiral04",
       Icon: BsTwitter,
     },
     {
